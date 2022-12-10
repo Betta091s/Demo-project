@@ -1,3 +1,54 @@
-h1 {
-    color:darkgoldenrod
+*{
+  box-sizing: border-box; 
+  margin: 0;
+  padding: auto;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+
+}
+
+.navbar {
+background: rgb(15, 15, 15);
+height: 150 px;
+display:flex; /*flexible*/
+justify-content: center;
+align-items: center;
+font-size: 1.2rem;  /*1 rem= 16px*/
+position: sticky; /* position will be sticky*/
+top: 0;
+z-index: 999; /*z- index is more like a 3 dimensional positioning/stacking, No matter whereever I scroll my screen my nav bar will be at the top   */
+}
+
+.navbar_container {
+    display:flex;
+    height: 80px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 auto;
+    z-index: 1;
+
+}
+
+#navbar_logo{
+    background-color: rgb(236, 227, 227);
+    /* makes the whole navbar_logo section have that gradient color */ 
+    background-image: linear-gradient(to top, rgb(231, 194, 192) 0%, rgb(209, 42, 30) 100%);
+    background-size: 100%;
+    -webkit-background-clip:text ; /* the color affect will only happen in the text*/
+    -moz-background-clip:text;  /* the color affect will only happen in the text*/
+    -webkit-text-fill-color: transparent;  /* the text is now filled with color*/
+    -moz-text-fill-color:transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar_menu {
+display:flex
+align-items: center;
+list-style: none;
+
 }
