@@ -33,7 +33,7 @@ z-index: 999; /*z- index is more like a 3 dimensional positioning/stacking, No m
 #navbar_logo {  /* since it is an id inside a div*/
     background-color: rgb(236, 227, 227);
     /* makes the whole navbar_logo section have that gradient color */ 
-    background-image: linear-gradient(to top, rgb(231, 194, 192) 0%, rgb(209, 42, 30) 100%);
+    background-image: linear-gradient(to top, rgb(241, 193, 181) 0%, rgb(252, 22, 6) 100%);
     background-size: 100%;
     -webkit-background-clip:text ; /* the color affect will only happen in the text*/
     -moz-background-clip:text;  /* the color affect will only happen in the text*/
@@ -92,7 +92,14 @@ width: 100%;
 border: none;
 outline: none;
 border-radius: 4px;
-background:rgb(209, 42, 30) ; /* button background*/
+background:rgb(247, 65, 53) ; /* button background*/
 color:aliceblue; /*text color*/
+
+}
+
+.button:hover { /*hover effect*/
+background: #4837ff; /*when we will move the curson on the button it will change it's original color to purple*/
+transition: all 0.3s ease; /* after clicking the button instead of moving to the nextpage instantly it will delay 0.3 sec*/
+
 
 }
