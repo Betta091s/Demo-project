@@ -15,7 +15,8 @@ align-items: center;
 font-size: 1.2rem;  /*1 rem= 16px*/
 position: sticky; /* position will be sticky*/
 top: 0;
-z-index: 999; /*z- index is more like a 3 dimensional positioning/stacking, No matter whereever I scroll my screen my nav bar will be at the top   */
+z-index: 999; /*z- index is more like a 3 dimensional positioning/stacking, 
+No matter whereever I scroll my screen my nav bar will be at the top   */
 }
 
 .navbar_container {
@@ -98,8 +99,102 @@ color:aliceblue; /*text color*/
 }
 
 .button:hover { /*hover effect*/
-background: #4837ff; /*when we will move the curson on the button it will change it's original color to purple*/
-transition: all 0.3s ease; /* after clicking the button instead of moving to the nextpage instantly it will delay 0.3 sec*/
+background: #4837ff; /*when we will move the curson on the button it will
+ change it's original color to purple*/
+transition: all 0.3s ease; /* after clicking the button instead of moving to the
+ nextpage instantly it will delay 0.3 sec*/
+
+}
+
+.navbar_links:hover {
+  color: rgb(252, 22, 6); /*hover effect, only text color will change*/
+  transition: all 0.3s ease;
+}
+
+/*mobile responsive tablet reponsive part - " The media query"*/
+
+@media screen and (max-width: 960px) {
+/* One way to use media queries is to have an alternate CSS section 
+right inside your style sheet. 
+
+Media queries allow you to apply CSS styles depending on a device's general
+ type (such as print vs. screen) or other characteristics such as screen 
+ resolution or browser viewport width. Media queries are used for the following: 
+To conditionally apply styles with the CSS @media and @import at-rules.
+
+*/ 
 
 
+/* this will help design the drop down navbar */ 
+  .navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+
+  }
+
+
+  .navbar_menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px; /* Because the animation will come from the top  */ 
+    opacity: 0;  /* transparency level  */
+    transition: all 0.5s ease;
+    height: 50vh; /* viewport height  */
+    z-index: -1; /* so that we can click on the icon to trigger this  */
+
+
+  }
+
+  .navbar_menu.active {
+/*  this is going to be the Javascript code that is going to trigger the dropdown navbar  */
+    background: black;
+    top: 100%; /* This will show the entire active menu  */
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 50vh;
+    font-size: 1.6rem;
+    /* you can't see anything untill you active/edit the menubar  */
+  }
+
+  #navbar_logo {
+    padding: 25px;
+
+  }
+
+  .navbar_toggle .bar {
+     width: 25px;
+     height: 3px;
+     margin: 5px auto;
+     transition: all 0.3s ease-in-out;
+     background: white ;
+
+  }
+  .navbar_item{
+    width: 100%;
+
+  }
+  .navbar_links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20% );
+
+
+  } 
 }
