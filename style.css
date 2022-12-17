@@ -50,5 +50,22 @@ z-index: 999; /*z- index is more like a 3 dimensional positioning/stacking, No m
 display:flex
 align-items: center;
 list-style: none;
+text-align: center;
+}
+
+.navbar_item{
+
+  height: :80px;
+
+}
+.navbar_links{
+color:aliceblue;
+display:flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+padding: 0 1 rem;
+height: 80px;
+
 
 }
