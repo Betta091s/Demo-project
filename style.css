@@ -145,7 +145,9 @@ To conditionally apply styles with the CSS @media and @import at-rules.
     width: 100%;
     position: absolute;
     top: -1000px; /* Because the animation will come from the top  */ 
-    opacity: 0;  /* transparency level  */
+    opacity: 0;  /* transparency level  */ /* if I comment top:-1000px and opacity:0 
+    the hovered navbar will be vanished/invisible */
+    background: black;
     transition: all 0.5s ease;
     height: 50vh; /* viewport height  */
     z-index: -1; /* so that we can click on the icon to trigger this  */
@@ -189,6 +191,15 @@ To conditionally apply styles with the CSS @media and @import at-rules.
     display: table;
   }
 
+   /* Remember: from index.html file
+      <div class="navbar_toggle" id="mobile-menu">
+                <span class ="bar"></span>
+                <span class ="bar"></span>
+                <span class ="bar"></span>
+            </div>
+
+     */ 
+
   #mobile-menu {
     position: absolute;
     top: 20%;
@@ -197,4 +208,66 @@ To conditionally apply styles with the CSS @media and @import at-rules.
 
 
   } 
+
+  .navbar_btn {
+    padding-bottom: 2rem;
+
+  }
+  .button {
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 80%;
+     height: 80px;
+     margin: 0;
+
+  }
+
+  .navbar_toggle .bar {  /* displays the 3 white bar sign  */ 
+    display: block;
+    cursor: pointer;
+  }
+
+  /* Now we need the toggle bar to work and put some 
+  animation into it as well.
+  
+  we  want our 3 white bar= our navbar to interact with one click
+ we want -
+ 1. when we will click the 3bar it will open the navbar menu like 
+ a drop down ( but for a particular width only, like we mentioned 
+ for our maxwidth=960px, and we will see the drop down menu other wise
+ usual screen
+ 
+ when we will be watching the dropdown menu we want our 3 bar sticks to turn into a cross(x).
+ and when we don't want to see the dropdown menu we will click the
+ cross(x) and the dropdwon menu will hide and clear the view
+  */
+
+  
+    /* In case if you 
+    forgot about what is nth-child  selector in HTML is , please visit: https://youtu.be/TVj1avJj8a8  
+    Remember you can use n-th child selector as an alternative to "classes" or "ID"s and just add styles to a specific elelment 
+    of a list or html page using n-th child
+    */
+    
+  
+ /*  we will transform our 3 bars to a cross as follows:
+      1. for a cros we only need two lines/sticks and that is why we will make
+      our 2nd bar/line/stick's opacity=0 meaning the 2nd bar will be invisible.
+      2. and for the 1st and 3rd bar will will transform them and rotate them +45deg and -45deg*/ 
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  /* however making this styles/ designs will not work until we program it in javascript*/
+
+
+
 }
