@@ -6,6 +6,40 @@
 
 }
 /* for all the classes we will need to define it inside .class_name{} */
+
+
+/* Navbar section
+<nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar_logo"><i class="fa-solid fa-mountain-sun"></i>  <h3> Go Solo </h3><br>
+                </a>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class ="bar"></span>
+                <span class ="bar"></span>
+                <span class ="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="/" class="navbar_links">Home</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/about.html" class="navbar_links">About</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/fundme.html" class="navbar_links">Fund Me</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/joinme.html" class="navbar_links">Join Me</a>
+                </li>
+                <li class="navbar_btn">
+                    <a href="/signin.html" class="button">Sign In</a>
+                </li>
+            </ul>
+
+            
+        </div>
+    </nav>
+*/
 .navbar {
 background: rgb(15, 15, 15);
 height: 130px;
@@ -36,7 +70,7 @@ No matter whereever I scroll my screen my nav bar will be at the top   */
 #navbar_logo {  /* since it is an id inside a div*/
     background-color: rgb(236, 227, 227);
     /* makes the whole navbar_logo section have that gradient color */ 
-    background-image: linear-gradient(to top,  rgb(211, 72, 72)5%, rgb(253, 237, 237) 100%);
+    background-image: linear-gradient(to top,  rgb(230, 20, 20)5%, rgb(253, 237, 237) 100%);
     background-size: 100%;
     -webkit-background-clip:text; /* the color affect will only happen in the text*/
     -moz-background-clip:text;  /* the color affect will only happen in the text*/
@@ -102,13 +136,17 @@ border-radius: 10px;
 background: #f17c7c ; /* button background*/
 color:aliceblue; /*text color*/
 
+
 }
 
-.button:hover { /*hover effect*/
+/* Navbar hover effect*/
+
+.button:hover { 
 background: #f3364f; /*when we will move the curson on the button it will
  change it's original color to purple*/
 transition: all 0.3s ease; /* after clicking the button instead of moving to the
  nextpage instantly it will delay 0.3 sec*/
+ 
 
 }
 
@@ -154,8 +192,9 @@ To conditionally apply styles with the CSS @media and @import at-rules.
     opacity: 0;  /* transparency level  */ /* if I comment top:-1000px and opacity:0 
     the hovered navbar will be vanished/invisible */
     background: #141414;
-    padding-top: 50px;
+    padding-top: 20px;
     padding-right: 50px;
+    padding-bottom: 20px;
     align-items: center;
     border-radius: 10px;
     transition: all 0.5s ease;
@@ -282,7 +321,22 @@ To conditionally apply styles with the CSS @media and @import at-rules.
 
 }
 
-/* Main Section*/
+/* Main Section
+
+<div class="main">
+      <div class="main_container">
+        <div class="main_content">
+            <h1>Thinking About a Solo Trip?</h1>
+            <h6>Then Sit Tight and Learn What You Need To Know Before You Start Your Solo Venture! </h6>
+            <p>Solo travel can be a rewarding and enriching experience, as it allows you to have complete freedom and control over your travel plans and activities.</p>
+            <button class = "main_btn"><a href = "/">Get Started</a></button>
+        </div>
+        <div class="main_img_container">
+            <img src="images/mainpagepic1.svg" alt="pic" id="main_img"/>
+        </div>
+      </div>
+    </div>
+*/
 
 .main {
   background-color: #141414; /* transparent black*/
@@ -295,14 +349,13 @@ To conditionally apply styles with the CSS @media and @import at-rules.
   background-color: #141414;
   z-index: 1;
   width: 100%;
-  max-width: 1300px;
   padding: 0 50px;
 }
 
 .main_content h1 {
   font-size: 4rem;
   background-color:#f17c7c;
-  background-image: linear-gradient(to top, rgb(211, 72, 72)5%, rgb(253, 237, 237) 100% );
+  background-image: linear-gradient(to top,  rgb(211, 72, 72)5%, rgb(253, 237, 237) 100%);
   background-size: 100%;
   -webkit-background-clip:text ; /* the color affect will only happen in the text*/
   -moz-background-clip:text;  /* the color affect will only happen in the text*/
@@ -384,13 +437,14 @@ top: 0;
 left: 0;
 width: 0;
 height: 100%;
-background: #4837ff ;
+background:  #f3364f;
 transition: all 0.3s;
 border-radius: 10px;
 
 
 }
 
+/* main section hover effect*/
 .main_btn:hover {
 color: aliceblue;
 
@@ -402,10 +456,134 @@ color: aliceblue;
 }
 
 .main_img_container {
-  text-align: center;
+  text-align: right;
+  padding-right: 25px;
 }
 
 #main_img {
-  height:80%;
-  Width:80%;
+  height:50%;
+  Width:50%;
+  
 }
+
+/*  Mobile Responsive*/
+
+@media screen and (max-width:768px) {
+
+  .main_container{
+  display:grid;
+  grid-template-columns:auto;
+  align-items: center; /* will keep the items/contents in the center  */
+  justify-self: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 90vh;
+
+  }
+
+  .main_content {
+    text-align: center;
+    margin-bottom: 4rem;
+
+  }
+
+  .main_content h1 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+
+  }
+
+  .main_content h6 {
+    font-size: 3rem;
+    
+
+  }
+
+  .main_content p {
+    font-size: 1.5rem;
+    font-size: 1rem;
+
+  }
+
+  
+
+
+}
+
+/*  media query */ 
+@media screen and (max-width: 480px){
+  .main_content h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+
+  }
+
+  .main_content h6 {
+    font-size: 2rem;
+    
+
+  }
+
+  .main_content p {
+    font-size: 1.5rem;
+    font-size: 2rem;
+
+  }
+
+  .main_btn {
+    padding: 12px 36px;
+    margin: 2.5rem 0;
+  }
+
+
+} 
+/* main part 2 content
+
+<div class="main_two">
+        <h1>ABC</h1>
+        <div class="main_two_container">
+            <div class="main_two_content">
+                <h2>Abhugfisuhfis</h2>
+                <p>hsdkgfisd gfdshgff jdgfshdgfuysg </p>
+                <button> hubinkl</button>
+
+            </div>
+        </div>
+    </div>
+*/
+
+.main_two {
+  background: #141414;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.main_two h1 {
+  background-color:#f17c7c;
+  background-image: linear-gradient(
+    to right,
+    #c78573 0%,
+    #ebc39e 0%,
+    #a5584e 50%,
+    #d62276 80%,
+    #e20c70 100% );
+  background-size: 100%;
+  -webkit-background-clip:text ; /* the color affect will only happen in the text*/
+  -moz-background-clip:text;  /* the color affect will only happen in the text*/
+  -webkit-text-fill-color: transparent;  /* the text is now filled with color*/
+  -moz-text-fill-color:transparent;
+  margin-bottom: 5rem;
+  font-size:2.5rem ;
+}
+
+.main_two_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+
