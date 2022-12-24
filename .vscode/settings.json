@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/cb39ab9d-15c6-46d0-ade2-a6720c096a45/AppServices/subscriptions/cb39ab9d-15c6-46d0-ade2-a6720c096a45/resourceGroups/RG-MandM/providers/Microsoft.Web/sites/GoSolo",
+    "appService.deploySubpath": "."
+}
