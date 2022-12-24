@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--the page will fit to the screen-->
-    <title>Roshogolla</title>
-    <meta name="description" content=" Roshogolla ">
+    <title>Go Solo</title>
+    <meta name="description" content=" Go Solo ">
     <link rel="stylesheet" href ="style.css"/>
+    <script src="https://kit.fontawesome.com/bfd76ac2a0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <!-- inside the body there will be a navbar-->
+    <!-- navbar Section-->
     <nav class="navbar">
         <div class="navbar__container">
-            <a href="/" id="navbar_logo">Roshogolla</a>
+            <a href="/" id="navbar_logo"><i class="fa-solid fa-mountain-sun"></i>  <h3> Go Solo </h3><br>
+                </a>
             <div class="navbar_toggle" id="mobile-menu">
                 <span class ="bar"></span>
                 <span class ="bar"></span>
@@ -24,13 +28,13 @@
                     <a href="/" class="navbar_links">Home</a>
                 </li>
                 <li class="navbar_item">
-                    <a href="/aboutus.html" class="navbar_links">About Us</a>
+                    <a href="/about.html" class="navbar_links">About</a>
                 </li>
                 <li class="navbar_item">
-                    <a href="/donation.html" class="navbar_links">Donation</a>
+                    <a href="/fundme.html" class="navbar_links">Fund Me</a>
                 </li>
                 <li class="navbar_item">
-                    <a href="/joinus.html" class="navbar_links">Join Us</a>
+                    <a href="/joinme.html" class="navbar_links">Join Me</a>
                 </li>
                 <li class="navbar_btn">
                     <a href="/signin.html" class="button">Sign In</a>
@@ -40,8 +44,24 @@
             
         </div>
     </nav>
+
+    <!-- Main Section-->
+    <div class="main">
+      <div class="main_container">
+        <div class="main_content">
+            <h1>Thinking About a Solo Trip?</h1>
+            <h6>Then Sit Tight and Learn What You Need To Know Before You Start Your Solo Venture! </h6>
+            <p>Solo travel can be a rewarding and enriching experience, as it allows you to have complete freedom and control over your travel plans and activities.</p>
+            <button class = "main_btn"><a href = "/">Get Started</a></button>
+            <div class="main_img_container"></div>
+            <img src="images/mainpagepic1.svg" alt="pic" id="main_img"/>
+        </div>
+      </div>
+    </div>
     <!-- right after the </nav> tag add your <script> tag for nav functioning-->
     <script src="app.js"></script>
+
+    <!--<img src="charizardlogo.svg" alt = "My dragon SVG" /> -->
 
 </body>
 </html>

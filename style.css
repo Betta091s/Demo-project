@@ -31,12 +31,14 @@ No matter whereever I scroll my screen my nav bar will be at the top   */
 
 }
 
+
+
 #navbar_logo {  /* since it is an id inside a div*/
     background-color: rgb(236, 227, 227);
     /* makes the whole navbar_logo section have that gradient color */ 
-    background-image: linear-gradient(to top, rgb(241, 193, 181) 0%, rgb(252, 22, 6) 100%);
+    background-image: linear-gradient(to top,  rgb(211, 72, 72)5%, rgb(253, 237, 237) 100%);
     background-size: 100%;
-    -webkit-background-clip:text ; /* the color affect will only happen in the text*/
+    -webkit-background-clip:text; /* the color affect will only happen in the text*/
     -moz-background-clip:text;  /* the color affect will only happen in the text*/
     -webkit-text-fill-color: transparent;  /* the text is now filled with color*/
     -moz-text-fill-color:transparent;
@@ -45,11 +47,15 @@ No matter whereever I scroll my screen my nav bar will be at the top   */
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
+    font: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     padding-top: 20px;
+    
 }
-.fa-gem{
+. fa-solid fa-mountain-sun {
   margin-right: 0.5rem;
 }
+
 
 .navbar_menu {
 display:flex;
@@ -92,14 +98,14 @@ height: 100%;
 width: 100%;
 border: none;
 outline: none;
-border-radius: 4px;
-background:rgb(247, 65, 53) ; /* button background*/
+border-radius: 10px;
+background: #f17c7c ; /* button background*/
 color:aliceblue; /*text color*/
 
 }
 
 .button:hover { /*hover effect*/
-background: #4837ff; /*when we will move the curson on the button it will
+background: #f3364f; /*when we will move the curson on the button it will
  change it's original color to purple*/
 transition: all 0.3s ease; /* after clicking the button instead of moving to the
  nextpage instantly it will delay 0.3 sec*/
@@ -107,7 +113,7 @@ transition: all 0.3s ease; /* after clicking the button instead of moving to the
 }
 
 .navbar_links:hover {
-  color: rgb(252, 22, 6); /*hover effect, only text color will change*/
+  color: #f3364f; /*hover effect, only text color will change*/
   transition: all 0.3s ease;
 }
 
@@ -142,12 +148,16 @@ To conditionally apply styles with the CSS @media and @import at-rules.
     display: grid;
     grid-template-columns: auto;
     margin: 0;
-    width: 100%;
+    width: 600px;
     position: absolute;
     top: -1000px; /* Because the animation will come from the top  */ 
     opacity: 0;  /* transparency level  */ /* if I comment top:-1000px and opacity:0 
     the hovered navbar will be vanished/invisible */
-    background: black;
+    background: #141414;
+    padding-top: 50px;
+    padding-right: 50px;
+    align-items: center;
+    border-radius: 10px;
     transition: all 0.5s ease;
     height: 50vh; /* viewport height  */
     z-index: -1; /* so that we can click on the icon to trigger this  */
@@ -270,4 +280,132 @@ To conditionally apply styles with the CSS @media and @import at-rules.
 
 
 
+}
+
+/* Main Section*/
+
+.main {
+  background-color: #141414; /* transparent black*/
+  grid-template-columns: 1fr 1fr; /* 1FR = 1/3rd or 33.333% of the available 
+  space.*/
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  height: 90vh;
+  background-color: #141414;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 50px;
+}
+
+.main_content h1 {
+  font-size: 4rem;
+  background-color:#f17c7c;
+  background-image: linear-gradient(to top, rgb(211, 72, 72)5%, rgb(253, 237, 237) 100% );
+  background-size: 100%;
+  -webkit-background-clip:text ; /* the color affect will only happen in the text*/
+  -moz-background-clip:text;  /* the color affect will only happen in the text*/
+  -webkit-text-fill-color: transparent;  /* the text is now filled with color*/
+  -moz-text-fill-color:transparent;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  padding-top: 20px;
+
+}
+
+.main_content h6 {
+  font-size: 4rem;
+  background-color:#f17c7c;
+  background-image: linear-gradient(to top, rgb(41, 151, 214)5%, rgb(129, 230, 240) 100% );
+  background-size: 100%;
+  -webkit-background-clip:text ; /* the color affect will only happen in the text*/
+  -moz-background-clip:text;  /* the color affect will only happen in the text*/
+  -webkit-text-fill-color: transparent;  /* the text is now filled with color*/
+  -moz-text-fill-color:transparent;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.6rem;
+  /*font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  padding-top: 20px; */
+
+}
+
+.main_content p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: aliceblue;
+}
+
+.main_btn {
+  font-size: 1rem;
+  background: #f17c7c; /* button b
+  ackground*/
+  padding: 14px 32px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+
+}
+
+.main_btn a {
+  position: relative;
+  z-index: 2;
+  color: aliceblue;
+  text-decoration: none;
+
+}
+
+/*  The ::after selector inserts something after the content of each selected element(s).
+
+Use the "content" property to specify the content to insert.
+
+Use the ::before selector to insert something before the content. 
+
+p::after {
+  content: " - Remember this";
+}
+*/
+
+.main_btn:after {
+position: absolute;
+content: ''; /* empty string for now, will change later */
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: #4837ff ;
+transition: all 0.3s;
+border-radius: 10px;
+
+
+}
+
+.main_btn:hover {
+color: aliceblue;
+
+}
+
+.main_btn:hover:after {
+  width: 100%;
+
+}
+
+.main_img_container {
+  text-align: center;
+}
+
+#main_img {
+  height:80%;
+  Width:80%;
 }
